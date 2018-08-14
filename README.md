@@ -43,13 +43,47 @@ column 4: include
 </br>
 Example:
 <br/>
-&nbsp;&nbsp;&nbsp;samples shortnames  groups  include<br/>
-&nbsp;&nbsp;&nbsp;Control_1	C_1	control	TRUE<br/>
-&nbsp;&nbsp;&nbsp;Control_2	C_2	control	TRUE<br/>
-&nbsp;&nbsp;&nbsp;Control_3	C_3	control	TRUE<br/>
-&nbsp;&nbsp;&nbsp;Treated_1	T_1	treated	TRUE<br/>
-&nbsp;&nbsp;&nbsp;Treated_2	T_2	treated	TRUE<br/>
-&nbsp;&nbsp;&nbsp;Treated_3	T_3	treated	TRUE<br/>
+<table border= "1px solid black">
+  <tr>
+    <th>samples</th>
+    <th>shortnames</th>
+    <th>groups</th>  
+    <th>include</th>  
+  </tr>
+  <tr>
+    <th>Control_1</th>
+    <th>Control_2</th>  
+    <th>Control_3</th>  
+    <th>Treated_1</th>
+    <th>Treated_2</th>
+    <th>Treated_3</th>
+  </tr>
+   <tr>
+    <th>C_1</th>
+    <th>C_2</th>  
+    <th>C_3</th>  
+    <th>T_1</th>
+    <th>T_2</th>
+    <th>T_3</th>
+  </tr>
+   <tr>
+    <th>control</th>
+    <th>control</th>  
+    <th>control</th>  
+    <th>treated</th>
+    <th>treated</th>
+    <th>treated</th>
+  </tr>
+   <tr>
+    <th>TRUE</th>
+    <th>TRUE</th>  
+    <th>TRUE</th>  
+    <th>TRUE</th>
+    <th>TRUE</th>
+    <th>TRUE</th>
+  </tr>
+</table>
+    
 
 
 
