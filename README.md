@@ -52,34 +52,38 @@ Example:
   </tr>
   <tr>
     <th>Control_1</th>
-    <th>Control_2</th>  
-    <th>Control_3</th>  
-    <th>Treated_1</th>
-    <th>Treated_2</th>
-    <th>Treated_3</th>
+    <th>C_1</th>  
+    <th>control</th>  
+    <th>TRUE</th>
   </tr>
-   <tr>
-    <th>C_1</th>
+  <tr>
+    <th>Control_2</th>
     <th>C_2</th>  
+    <th>control</th>  
+    <th>TRUE</th>
+  </tr>
+  <tr>
+    <th>Control_3</th>
     <th>C_3</th>  
-    <th>T_1</th>
-    <th>T_2</th>
-    <th>T_3</th>
-  </tr>
-   <tr>
-    <th>control</th>
     <th>control</th>  
-    <th>control</th>  
-    <th>treated</th>
-    <th>treated</th>
-    <th>treated</th>
+    <th>TRUE</th>
   </tr>
-   <tr>
+  <tr>
+    <th>Treated_1</th>
+    <th>T_1</th>  
+    <th>treated</th>  
     <th>TRUE</th>
-    <th>TRUE</th>  
-    <th>TRUE</th>  
+  </tr>
+  <tr>
+    <th>Treated_2</th>
+    <th>T_2</th>  
+    <th>treated</th>  
     <th>TRUE</th>
-    <th>TRUE</th>
+  </tr>
+  <tr>
+    <th>Treated_3</th>
+    <th>T_3</th>  
+    <th>treated</th>  
     <th>TRUE</th>
   </tr>
 </table>
