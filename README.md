@@ -18,10 +18,13 @@ You can download iSeqQC from github using following (if git is already installed
 
 ### Prerequisities
 Running iSeqQC locally requires: 
-- Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download
+- Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
 - Installation of bioconductor packages using following commands: <br/>
-    - source("https://<span></span>bioconductor.org/biocLite.R")
-    - biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
-    
-    
+     source("https://<span></span>bioconductor.org/biocLite.R") <br/>
+     biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
+
+### Running iSeqQC
+After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:
+library("shiny")
+library("iSeqQC")
   
