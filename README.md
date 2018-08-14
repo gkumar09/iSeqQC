@@ -7,7 +7,7 @@ Quality Control (QC) in any high-throughput technology is a critical step, overl
                                  Step 3: Mapping quality <br/>
                                  Step 4: Batch effects 
 
-Although, several attempts have been made to help researchers to circumvent the errors and biases in their sequencing experiment by developing several tools which detects sequencing and mapping quality (FastQC, Picard, RseQC, RNA-SeQC, QC3 and so on). The scrutinizing of batch effects in any high-throughput sequencing experiment are often ignored or conducted on limited basis.  
+Although, several attempts have been made to help researchers to circumvent the errors and biases in their sequencing experiment with the help of several tools which detects sequencing and mapping quality (FastQC, Picard, RseQC, RNA-SeQC, QC3 and so on). The scrutinizing of batch effects in any high-throughput sequencing experiment are often ignored or conducted on limited basis.  
 
 iSeqQC is developed to analyze batch effects in a high-throughput study that could be due to laboratory conditions, reagent lots, personnel differences, different experiment times, biological samples and so on. It is a light-weight web UI tool that requires only sample phenotype data and count matrix file (from any counts reading tool e.g. HTseq, RSEM) to generate several plots indicating possible biasness in an experiment. It implements several statistical methods (unsupervised clustering, coorelation coffiecients, classical multidimensional scaling, mean-variance relationship). Not restricted to only RNA-seq, iSeqQC can be used with any of the high-throughput technology which results in counts matrix produced by overlap of reads with genes such as microarray, RNA-seq, ATAC-seq etc.    
 
@@ -120,5 +120,10 @@ Example:<br/>
   </tr>
 </table>
 
+### Workflow
+![alt text](/Users/gxk039/Documents/tools/qc_tool/tool_publishing/github/images)
 
+### Results Output
+iSeqQC displays the results in a total of 8 figures and 1 table segregated into three different tabs in web UI: 
+- Summary, hierarchical, and correlation  
 
