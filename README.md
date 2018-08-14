@@ -12,5 +12,5 @@ Although, several attempts have been made to help researchers to circumvent the 
 iSeqQC is developed to analyze batch effects in a high-throughput study that could be due to laboratory conditions, reagent lots, personnel differences, different experiment times, biological samples and so on. It is a very light-weight UI based tool that uses several statistical methods (unsupervised clustering, coorelation coffiecients, classical multidimensional scaling, mean-variance relationship) to generate several plots indicating possible biasness in an experiment. Not restricted to only RNA-seq, iSeqQC can be used with any of the high-throughput technology which results in counts matrix produced by overlap of reads with genes such as microarray, RNA-seq, ATAC-seq etc.    
 
 ### Download
-You can download iSeqQC from github using following (if git is already installed in your computer):
-git clone 
+You can download iSeqQC from github using following (if git is already installed in your computer):<br/>
+git clone https://github.com/gkumar09/iSeqQC.git
