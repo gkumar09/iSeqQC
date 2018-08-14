@@ -41,8 +41,14 @@ column 2: shortnames<br/>
 column 3: groups<br/>
 column 4: include</br>
 
-Example file:
-![image][]
+Example:
+samples	shortnames	groups	include
+Control_1	C_1	control	TRUE
+Control_2	C_2	control	TRUE
+Control_3	C_3	control	TRUE
+Treated_1	T_1	treated	TRUE
+Treated_2	T_2	treated	TRUE
+Treated_3	T_3	treated	TRUE
 
 
 
