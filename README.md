@@ -13,4 +13,4 @@ iSeqQC is developed to analyze batch effects in a high-throughput study that cou
 
 ### Download
 You can download iSeqQC from github using following (if git is already installed in your computer):<br/>
-git clone https://github.com/gkumar09/iSeqQC.git
+git clone https://<span></span>github.com/gkumar09/iSeqQC.git
