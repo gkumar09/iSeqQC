@@ -43,13 +43,13 @@ column 4: include
 </br>
 Example:
 <br/>
-samples shortnames  groups  include
-Control_1	C_1	control	TRUE<br/>
-Control_2	C_2	control	TRUE<br/>
-Control_3	C_3	control	TRUE<br/>
-Treated_1	T_1	treated	TRUE<br/>
-Treated_2	T_2	treated	TRUE<br/>
-Treated_3	T_3	treated	TRUE<br/>
+&nbsp;&nbsp;&nbsp;samples shortnames  groups  include<br/>
+&nbsp;&nbsp;&nbsp;Control_1	C_1	control	TRUE<br/>
+&nbsp;&nbsp;&nbsp;Control_2	C_2	control	TRUE<br/>
+&nbsp;&nbsp;&nbsp;Control_3	C_3	control	TRUE<br/>
+&nbsp;&nbsp;&nbsp;Treated_1	T_1	treated	TRUE<br/>
+&nbsp;&nbsp;&nbsp;Treated_2	T_2	treated	TRUE<br/>
+&nbsp;&nbsp;&nbsp;Treated_3	T_3	treated	TRUE<br/>
 
 
 
