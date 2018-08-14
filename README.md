@@ -30,3 +30,12 @@ setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")
   
+##
+
+# Input files requirement
+iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
+1. File 1- Sample phenotype data: **Strictly limited to 4 columns in same order as mentioned below (names case-sensitive)**
+|samples | shortnames | groups | include |
+|----------------------------------------| 
+|
+
