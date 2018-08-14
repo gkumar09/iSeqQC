@@ -101,13 +101,22 @@ Example:<br/>
     <th>Treated_3</th>
   </tr>
  <tr>
-    <th>TSPAN6</th>
-    <th>642</th>
-    <th>329</th>  
-    <th>704</th>
-    <th>507</th>
-    <th>524</th>
-    <th>629</th>
+    <td>TSPAN6</td>
+    <td>642</td>
+    <td>329</td>  
+    <td>704</td>
+    <td>507</td>
+    <td>524</td>
+    <td>629</td>
+  </tr>
+   <tr>
+    <td>DPM1</td>
+    <td>1443</td>
+    <td>734</td>  
+    <td>1502</td>
+    <td>1175</td>
+    <td>1543</td>
+    <td>1111</td>
   </tr>
 </table>
 
