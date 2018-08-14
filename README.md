@@ -42,8 +42,7 @@ column 3: groups<br/>
 column 4: include
 </br>
 Example:
-<br/>
-<table border= "1px solid black">
+<table border= "1px solid black"; style="width:50%">
   <tr>
     <th>samples</th>
     <th>shortnames</th>
@@ -51,40 +50,40 @@ Example:
     <th>include</th>  
   </tr>
   <tr>
-    <th>Control_1</th>
-    <th>C_1</th>  
-    <th>control</th>  
-    <th>TRUE</th>
+    <td>Control_1</td>
+    <td>C_1</td>  
+    <td>control</td>  
+    <td>TRUE</td>
   </tr>
   <tr>
-    <th>Control_2</th>
-    <th>C_2</th>  
-    <th>control</th>  
-    <th>TRUE</th>
+    <td>Control_2</td>
+    <td>C_2</td>  
+    <td>control</td>  
+    <td>TRUE</td>
   </tr>
   <tr>
-    <th>Control_3</th>
-    <th>C_3</th>  
-    <th>control</th>  
-    <th>TRUE</th>
+    <td>Control_3</td>
+    <td>C_3</td>  
+    <td>control</td>  
+    <td>TRUE</td>
   </tr>
   <tr>
-    <th>Treated_1</th>
-    <th>T_1</th>  
-    <th>treated</th>  
-    <th>TRUE</th>
+    <td>Treated_1</td>
+    <td>T_1</td>  
+    <td>treated</td>  
+    <td>TRUE</td>
   </tr>
   <tr>
-    <th>Treated_2</th>
-    <th>T_2</th>  
-    <th>treated</th>  
-    <th>TRUE</th>
+    <td>Treated_2</td>
+    <td>T_2</td>  
+    <td>treated</td>  
+    <td>TRUE</td>
   </tr>
   <tr>
-    <th>Treated_3</th>
-    <th>T_3</th>  
-    <th>treated</th>  
-    <th>TRUE</th>
+    <td>Treated_3</td>
+    <td>T_3</td>  
+    <td>treated</td>  
+    <td>TRUE</td>
   </tr>
 </table>
     
