@@ -24,7 +24,7 @@ Running iSeqQC locally requires:
      biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
 
 ### Running iSeqQC
-After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:
-library("shiny")
+After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
+library("shiny")<br/>
 library("iSeqQC")
   
