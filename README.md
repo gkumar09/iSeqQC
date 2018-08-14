@@ -36,6 +36,6 @@ runApp("iSeqQC")
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
 1. File 1- Sample phenotype data: **Strictly limited to 4 columns in same order as mentioned below (names case-sensitive)** <br/>
 <br/>
-samples : shortnames : groups : include 
+samples | shortnames | groups | include 
 
 
