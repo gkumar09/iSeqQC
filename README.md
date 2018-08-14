@@ -30,19 +30,17 @@ setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")
   
-##
-
-# Input files requirement
+### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
-1. File 1- Sample phenotype data: **Strictly limited to 4 columns in same order as mentioned below (names case-sensitive)** 
+- File 1- Sample phenotype data: **Strictly limited to 4 columns in the same order as mentioned below (names case-sensitive)** 
 
 column 1: samples<br/>
 column 2: shortnames<br/>
 column 3: groups<br/>
 column 4: include<br/>
-<br/>
+
 Example:<br/>
-<br/>
+
 <table >
   <tr>
     <th>samples</th>
@@ -87,8 +85,31 @@ Example:<br/>
     <td>TRUE</td>
   </tr>
 </table>
-    
 
+- File 2- counts matrix file: **First column of this file should have official gene symbols under the name "gene_symbol"(case-sensitive)** 
+
+Example:<br/>
+
+<table >
+  <tr>
+    <th>gene_symbol</th>
+    <th>Control_1</th>
+    <th>Control_2</th>  
+    <th>Control_3</th>
+    <th>Treated_1</th>
+    <th>Treated_2</th>
+    <th>Treated_3</th>
+  </tr>
+ <tr>
+    <th>TSPAN6</th>
+    <th>642</th>
+    <th>329</th>  
+    <th>704</th>
+    <th>507</th>
+    <th>524</th>
+    <th>629</th>
+  </tr>
+</table>
 
 
 
