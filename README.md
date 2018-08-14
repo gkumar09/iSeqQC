@@ -39,10 +39,11 @@ iSeqQC requires two files for the analysis. Both files should be ASCII formatted
 column 1: samples<br/>
 column 2: shortnames<br/>
 column 3: groups<br/>
-column 4: include</br>
-
-Example:<br/>
-samples	shortnames	groups	include<br/>
+column 4: include
+</br>
+Example:
+<br/>
+samples | shortnames  | groups	| include
 Control_1	C_1	control	TRUE<br/>
 Control_2	C_2	control	TRUE<br/>
 Control_3	C_3	control	TRUE<br/>
