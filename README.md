@@ -20,6 +20,6 @@ You can download iSeqQC from github using following (if git is already installed
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)
 - Installation of bioconductor packages using following commands: <br/>
-source("https://<span></span>bioconductor.org/biocLite.R")
-biocLite()
+    - source("https://<span></span>bioconductor.org/biocLite.R")
+    - biocLite()
   
