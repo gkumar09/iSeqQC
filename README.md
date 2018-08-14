@@ -25,7 +25,7 @@ Running iSeqQC locally requires:
 
 ### Running iSeqQC
 After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
-library("shiny")<br/>
 <br/>
+library("shiny")<br/>
 library("iSeqQC")
   
