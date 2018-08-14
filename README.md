@@ -19,5 +19,5 @@ You can download iSeqQC from github using following (if git is already installed
 ### Prerequisities
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)
-- Installation of following bioconductor packages:
+- Installation of following bioconductor packages: <br/>
   . wwe
