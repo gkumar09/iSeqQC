@@ -43,7 +43,7 @@ column 4: include
 </br>
 Example:
 <br/>
-samples | shortnames  | groups	| include
+samples shortnames  groups  include
 Control_1	C_1	control	TRUE<br/>
 Control_2	C_2	control	TRUE<br/>
 Control_3	C_3	control	TRUE<br/>
