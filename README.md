@@ -136,5 +136,7 @@ iSeqQC displays the results in a form of bunch of plots segregated into three di
   - Principal Component variances of all samples: Plot showing variations between each sample and segregation of groups
   - CPM variances per sample for the housekeeping genes: Plot showing variations in expression of housekeeping genes (log2 transformed)
 - Correlational plots: 
-  -  
+  - Hierarchical relationship between samples: Plot displaying distance and dissimilarity between samples and groups
+  - Pearson correlation of all the samples: Plot displaying correlation of samples with each other
+  - Sample specific weights: Plot displaying the mean-variance relationship in the data
 
