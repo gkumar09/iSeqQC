@@ -1,4 +1,4 @@
-## iSeqQC: An App to perform Quality Controls on expression based high-throughput data  
+## iSeqQC: An Expression based Quality Control App  
 
 ### Introduction to iSeqQC
 Quality Control (QC) in any high-throughput technology is a critical step, overlooking which can compromise the true conclusion of the data. As mentioned previously by others, a typical RNA-seq analysis should undergo two stages (four steps) of QC: 
@@ -125,6 +125,9 @@ Example:<br/>
 
 
 ### Results Output
-iSeqQC displays the results in a total of 8 figures and 1 table segregated into three different tabs in web UI: 
-- Summary, hierarchical, and correlation  
+iSeqQC displays the results in a form of bunch of plots segregated into three different tabs in web UI: 
+- Summary plots:
+    - A text table giving summary statistics of the samples. Information provided here includes- mean, median, SD, min value, max value, range, skewness of the data, and kurtosis of the data
+- Clustering plots:
+- Correlational plots:  
 
