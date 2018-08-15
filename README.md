@@ -32,7 +32,8 @@ runApp("iSeqQC")
   
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
-- File 1- Sample phenotype data: **Strictly limited to 4 columns in the same order as mentioned below (names case-sensitive)** 
+- File 1- Sample phenotype data: **Strictly limited to 4 columns in the same order as mentioned below (names case-sensitive)** </br>
+**Sample names in first column 'samples' should match the names in counts matrix file**
 
 column 1: samples<br/>
 column 2: shortnames<br/>
@@ -127,7 +128,8 @@ Example:<br/>
 ### Results Output
 iSeqQC displays the results in a form of bunch of plots segregated into three different tabs in web UI: 
 - Summary plots:
-    - A text table giving summary statistics of the samples. Information provided here includes- mean, median, SD, min value, max value, range, skewness of the data, and kurtosis of the data
+    - A table providing summary statistics of the samples. Information provided here includes- mean, median, SD, min value, max value, range, skewness of the data, and kurtosis of the data
+    - 
 - Clustering plots:
 - Correlational plots:  
 
