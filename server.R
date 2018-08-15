@@ -1,18 +1,3 @@
-options(shiny.maxRequestSize = 1000000*1024^2)
-
-source("functions/correlation.R")
-source("functions/density.R")
-source("functions/distribution.R")
-source("functions/filtering.R")
-source("functions/housekeeping.R")
-source("functions/housekeeping_filt.R")
-source("functions/mds.R")
-source("functions/normalizing.R")
-source("functions/pca.R")
-source("functions/phylo.R")
-source("functions/summary.R")
-source("functions/weight.R")
-
 library("shiny")
 library("FactoMineR")
 library("factoextra")
@@ -22,6 +7,21 @@ library("data.table")
 library("ape")
 library("corrplot")
 library("limma")
+
+options(shiny.maxRequestSize = 1000000*1024^2)
+
+source("R/correlation.R")
+source("R/density.R")
+source("R/distribution.R")
+source("R/filtering.R")
+source("R/housekeeping.R")
+source("R/housekeeping_filt.R")
+source("R/mds.R")
+source("R/normalizing.R")
+source("R/pca.R")
+source("R/phylo.R")
+source("R/summary.R")
+source("R/weight.R")
 
 shinyServer(function(input, output, session) {
 
@@ -38,16 +38,10 @@ sum_input <- reactive({
         validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
       }
       counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-      if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-        err= "FALSE"
-        validate(err != "FALSE", "Sorry, can't plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-      }
-      else {
       filt_data_new <- filtering_data(manifest_file, counts_file)
       colnames(filt_data_new) <- manifest_file$shortnames
       data_final <- SumMarize(filt_data_new)
       data_final
-      }
     }
 })
 
@@ -63,15 +57,9 @@ sum2_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file)
     colnames(filt_data_new) <- manifest_file$shortnames
     distributionplot(filt_data_new)
-    }
   }
 })
 
@@ -87,15 +75,9 @@ sum3_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file)
     colnames(filt_data_new) <- manifest_file$shortnames
     transcriptplot(filt_data_new)
-    }
   }
 })
 
@@ -112,15 +94,9 @@ pca1_input <- reactive({
         validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
       }
       counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-      if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-        err= "FALSE"
-        validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-      }
-      else {
       filt_data_new <- filtering_data(manifest_file, counts_file) 
       data.norm <- normalize_data(filt_data_new)
       mdsplot(data.norm, manifest_file, 1.0)
-      }
     }
 })
 
@@ -136,17 +112,11 @@ pca2_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file) 
     data.norm <- normalize_data(filt_data_new)
     data.final <- as.matrix(data.norm)
     colnames(data.final) <- manifest_file$shortnames
     pcaplot(data.final, manifest_file)
-    }
   }
 })
 
@@ -163,11 +133,6 @@ pca3_input <- reactive({
     }
     manifest_file <- manifest_file[order(manifest_file$groups),]
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     data = na.omit(counts_file)
     new_counts <- data[,-1]
     norma <- normalize_data(new_counts)
@@ -177,7 +142,6 @@ pca3_input <- reactive({
     filt_data_new <- filtering_data(manifest_file, housekeeper)
     colnames(filt_data_new) <- paste0(manifest_file$shortnames, "_", manifest_file$groups)
     housekeeping_plot(manifest_file, filt_data_new, housekeeper, 0.7)    
-    }
   }
 })
 
@@ -193,16 +157,10 @@ cor1_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file)
     data.norm <- normalize_data(filt_data_new)
     colnames(data.norm) <- paste0(manifest_file$shortnames, "_", manifest_file$groups)
     phylo_plot(data.norm, 0.9)
-    }
   }
 })
 
@@ -218,16 +176,10 @@ cor2_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file)
     data.norm <- normalize_data(filt_data_new)
     colnames(data.norm) <- paste0(manifest_file$shortnames, ".", manifest_file$groups)
     correlation_plot(data.norm)
-    }
   }
 })
 
@@ -243,15 +195,9 @@ cor3_input <- reactive({
       validate(err != "FALSE", "Sorry, unable to plot: Either the column names in sample phenotype file doesn't meet the recommended names or order")
     }
     counts_file <- read.table(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-    if (any(grepl(paste0(manifest_file$samples, collapse = "|"), names(counts_file))[-1] == "FALSE")){
-      err= "FALSE"
-      validate(err != "FALSE", "Sorry, unable to plot: The sample names in counts file doesn't match with 'samples' in sample phenotype file")
-    }
-    else {
     filt_data_new <- filtering_data(manifest_file, counts_file)
     colnames(filt_data_new) <- paste0(manifest_file$shortnames, "_", manifest_file$groups)
     weight_plot(manifest_file, filt_data_new)
-    }
   }
 })
 
