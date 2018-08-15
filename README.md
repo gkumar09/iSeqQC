@@ -121,7 +121,8 @@ Example:<br/>
 </table>
 
 ### Workflow
-![workflow](https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png= 10x10)
+<img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="400" height="200">
+
 
 ### Results Output
 iSeqQC displays the results in a total of 8 figures and 1 table segregated into three different tabs in web UI: 
