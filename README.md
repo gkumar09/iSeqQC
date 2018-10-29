@@ -127,16 +127,13 @@ Example:<br/>
 
 ### Results Output
 iSeqQC displays the results in a form of bunch of plots segregated into three different tabs in web UI: 
-- Summary plots:
+- Summary module:
     - Summary Statistics of samples:  Provides summary statistics of the samples
     - Distribution of counts per sample: Plot displaying the distribution per sample (log2 transformed)
     - Density transcripts per sample: Plot displaying the density of distribution per sample (log2 transformed)
-- Clustering plots:
-  - Multi-Dimensional Scaling plot per sample: Plot displaying distances between each sample
+- Clustering module:
   - Principal Component variances of all samples: Plot showing variations between each sample and segregation of groups
-  - CPM variances per sample for the housekeeping genes: Plot showing variations in expression of housekeeping genes (log2 transformed)
-- Correlational plots: 
   - Hierarchical relationship between samples: Plot displaying distance and dissimilarity between samples and groups
   - Pearson correlation of all the samples: Plot displaying correlation of samples with each other
-  - Sample specific weights: Plot displaying the mean-variance relationship in the data
+  
 
