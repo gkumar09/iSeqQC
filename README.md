@@ -22,13 +22,6 @@ Running iSeqQC locally requires:
 - Installation of bioconductor packages using following commands: <br/>
      source("https://<span></span>bioconductor.org/biocLite.R") <br/>
      biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
-
-### Running iSeqQC
-After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
-<br/>
-setwd("path_to_local_iSeqQC_installation_directory") <br/>
-library("shiny")<br/>
-runApp("iSeqQC")
   
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
@@ -121,9 +114,12 @@ Example:<br/>
   </tr>
 </table>
 
-### Workflow
-<img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
-
+### Running iSeqQC
+After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
+<br/>
+setwd("path_to_local_iSeqQC_installation_directory") <br/>
+library("shiny")<br/>
+runApp("iSeqQC")
 
 ### Results Output
 iSeqQC displays the results in a form of bunch of plots segregated into three different tabs in web UI: 
@@ -136,4 +132,7 @@ iSeqQC displays the results in a form of bunch of plots segregated into three di
   - Hierarchical relationship between samples: Plot displaying distance and dissimilarity between samples and groups
   - Pearson correlation of all the samples: Plot displaying correlation of samples with each other
   
+### Workflow
+<img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
+
 
