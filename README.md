@@ -104,14 +104,7 @@ Example:<br/>
 
 
 ### Results Output
-iSeqQC displays the results in a form of a summary table and several plots: 
-    - Summary Statistics
-    - Counts distribution
-    - Mapped read density
-    - Housekeeping gene expression
-    - Principal Component variances
-    - Hierarchical relationship between samples
-    - Correlations (Pearson and Spearman)
+iSeqQC displays the results in a form of a summary table and several plots: Summary statistics, counts distribution, Mapped read density, Housekeeping gene expression, Principal Component variances, Hierarchical relationship between samples and correlations (Pearson and Spearman)
   
 ### Workflow
 <img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
