@@ -3,7 +3,7 @@
 ### Webpage
 iSeqQC is readily available at:<br/>
 <br/>
-&nbsp;&nbsp;&nbsp;https://<span></span>http://cancerwebpa.jefferson.edu/iSeqQC/
+&nbsp;&nbsp;&nbsp;<span></span>http://cancerwebpa.jefferson.edu/iSeqQC/
 
 ### Command line
 You can download iSeqQC from github using following (if git is already installed in your computer):<br/>
