@@ -1,27 +1,15 @@
-## iSeqQC: A count based Quality Control App  
+## iSeqQC: An Expression based Quality Control tool
 
-### Introduction to iSeqQC
-Quality Control (QC) in any high-throughput technology is a critical step, overlooking which can compromise the true conclusion of the data. As mentioned previously by others, a typical RNA-seq analysis should undergo two stages (four steps) of QC: 
-1) Stage 1: Laboratory based- Step 1: RNA quality
-2) Stage 2: Computational based- Step 2: Sequencing quality <br/>
-                                 Step 3: Mapping quality <br/>
-                                 Step 4: Batch effects 
+### Webpage
+iSeqQC is readily available at:<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;https://<span></span>http://cancerwebpa.jefferson.edu/iSeqQC/
 
-Although, several attempts have been made to help researchers to circumvent the errors and biases in their sequencing experiment with the help of several tools which detects sequencing and mapping quality (FastQC, Picard, RseQC, RNA-SeQC, QC3 and so on). The scrutinizing of batch effects in any high-throughput sequencing experiment are often ignored or conducted on limited basis.  
-
-iSeqQC is developed to analyze batch effects in a high-throughput study that could be due to laboratory conditions, reagent lots, personnel differences, different experiment times, biological samples and so on. It is a light-weight web UI tool that requires only sample phenotype data and count matrix file (from any counts reading tool e.g. HTseq, RSEM) to generate several plots indicating possible biasness in an experiment. It implements several statistical methods (unsupervised clustering, coorelation coffiecients, classical multidimensional scaling, mean-variance relationship). Not restricted to only RNA-seq, iSeqQC can be used with any of the high-throughput technology which results in counts matrix produced by overlap of reads with genes such as microarray, RNA-seq, ATAC-seq etc.    
-
-### Download
+### Command line
 You can download iSeqQC from github using following (if git is already installed in your computer):<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;git clone https://<span></span>github.com/gkumar09/iSeqQC.git
 
-### Prerequisities
-Running iSeqQC locally requires: 
-- Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
-- Installation of bioconductor packages using following commands: <br/>
-     source("https://<span></span>bioconductor.org/biocLite.R") <br/>
-     biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
   
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
@@ -114,23 +102,16 @@ Example:<br/>
   </tr>
 </table>
 
-### Running iSeqQC
-After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
-<br/>
-setwd("path_to_local_iSeqQC_installation_directory") <br/>
-library("shiny")<br/>
-runApp("iSeqQC")
 
 ### Results Output
-iSeqQC displays the results in a form of bunch of plots segregated into three different tabs in web UI: 
-- Summary module:
-    - Summary Statistics of samples:  Provides summary statistics of the samples
-    - Distribution of counts per sample: Plot displaying the distribution per sample (log2 transformed)
-    - Density transcripts per sample: Plot displaying the density of distribution per sample (log2 transformed)
-- Clustering module:
-  - Principal Component variances of all samples: Plot showing variations between each sample and segregation of groups
-  - Hierarchical relationship between samples: Plot displaying distance and dissimilarity between samples and groups
-  - Pearson correlation of all the samples: Plot displaying correlation of samples with each other
+iSeqQC displays the results in a form of a summary table and several plots: 
+    - Summary Statistics
+    - Counts distribution
+    - Mapped read density
+    - Housekeeping gene expression
+    - Principal Component variances
+    - Hierarchical relationship between samples
+    - Correlations (Pearson and Spearman)
   
 ### Workflow
 <img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
