@@ -149,20 +149,3 @@ pdf("Spearman_plot.pdf", height = 5, width = 6)
 corrplot(cor_cts, type="upper", order="hclust", col=cols, tl.col="black", tl.srt=45, tl.cex = 1,method = "square",main = "Spearman correlation of all the samples", mar=c(2,2,5,2))
 dev.off()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
