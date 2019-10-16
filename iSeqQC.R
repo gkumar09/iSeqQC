@@ -59,9 +59,16 @@ housekeeping_plot <- function(DF1, DF3){
   	housekeepers<- data.frame(gene_symbol= c("GAPDH", "ACTB"))
   	DF3$gene_symbol <- toupper(DF3$gene_symbol)
   	housekeep <- merge(housekeepers, DF3, by="gene_symbol", all=F)
+  	if (dim(housekeep)[1] == 2){
   	pdf("housekeeping_genes.pdf", height = 5, width = 6)
   	barplot(as.matrix(log2(housekeep[,-1])), names.arg = as.character(DF1[,2]), las=2, col=c("orange", "blue"), ylim=c(0,50))
-  	legend('topright', legend=c("GADPH", "ACTB"), pch=15, col= c("orange", "blue"))
+  	legend('topright', legend=c("GAPDH", "ACTB"), pch=15, col= c("orange", "blue"))
+  	}
+  	else{
+  	pdf("housekeeping_genes.pdf", height = 5, width = 6)
+  	plot(NA, xlim=c(0,1), ylim=c(0,1))
+    text(0.5,0.5,"No expression of GAPDH and ACTB found", cex = 1)
+  	}
 	dev.off()  
 }
 
@@ -106,11 +113,8 @@ final_data_new=ncounts_file[,grepl(paste0(manifest_file$samples, collapse = "|")
 filt_data_new <- final_data_new[match(as.character(manifest_file$samples), names(final_data_new))]
 nfilt_data_new <- cbind(counts_file[,1], filt_data_new)
 colnames(nfilt_data_new) <- c("gene_symbol", as.character(manifest_file$shortnames))
-if (dim(nfilt_data_new)[1]!=2) {
-  housekeeping_plot(manifest_file, nfilt_data_new) 
-  } else {
-  print("Cannot plot housekeeping plots as there is no ACTB and GAPDH housekeeping genes available in your organism")
-  } 
+housekeeping_plot(manifest_file, nfilt_data_new) 
+
 
 # PCA 
 filt_data_new <- filtering_data(manifest_file, counts_file) 
@@ -148,6 +152,17 @@ cols<- colorRampPalette(c("blue", "white", "red"))(20)
 pdf("Spearman_plot.pdf", height = 5, width = 6)
 corrplot(cor_cts, type="upper", order="hclust", col=cols, tl.col="black", tl.srt=45, tl.cex = 1,method = "square",main = "Spearman correlation of all the samples", mar=c(2,2,5,2))
 dev.off()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
