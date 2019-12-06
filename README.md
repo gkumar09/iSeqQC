@@ -19,7 +19,7 @@ Running iSeqQC locally requires:
      source("https://<span></span>bioconductor.org/biocLite.R") <br/>
      biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
      <br/>
-After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
+- After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
 setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")
