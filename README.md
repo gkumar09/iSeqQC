@@ -27,7 +27,7 @@ runApp("iSeqQC")
   
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
-- File 1- Sample phenotype data: **Strictly limited to 4 columns in the same order as mentioned below (names case-sensitive)** </br>
+- File 1- Sample phenotype data: **First 4 columns should strictly match the names and order as mentioned below (names case-sensitive)** </br>
 **Sample names in first column 'samples' should match the names in counts matrix file**
 
 column 1: samples<br/>
@@ -82,13 +82,13 @@ Example:<br/>
   </tr>
 </table>
 
-- File 2- counts matrix file: **First column of this file should have official gene symbols under the name "gene_symbol"(case-sensitive)** 
+- File 2- counts matrix file: **First column of this file should have official gene symbols or gene ids under the name "gene"(case-sensitive)** 
 
 Example:<br/>
 
 <table >
   <tr>
-    <th>gene_symbol</th>
+    <th>gene</th>
     <th>Control_1</th>
     <th>Control_2</th>  
     <th>Control_3</th>
@@ -118,7 +118,7 @@ Example:<br/>
 
 
 ### Results Output
-iSeqQC displays the results in a form of a summary table and several plots: Summary statistics, counts distribution, Mapped read density, Housekeeping gene expression, Principal Component variances, Hierarchical relationship between samples and correlations (Pearson and Spearman)
+iSeqQC displays the results in a form of a summary table and several plots: Summary statistics, counts distribution, Mapped read density, Housekeeping gene expression, Principal Component variances (zscored normalized), Principal Component variances (un-normalized), Hierarchical relationship between samples, Pearson correlation, Spearman correlation, GC bias)
   
 ### Workflow
 <img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
