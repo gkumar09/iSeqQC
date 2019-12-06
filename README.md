@@ -11,7 +11,6 @@ You can download iSeqQC from github using following (if git is already installed
 &nbsp;&nbsp;&nbsp;git clone https://<span></span>github.com/gkumar09/iSeqQC.git
 <br/>
 
-
 ### Local shiny installation
 #### Prerequisities
 Running iSeqQC locally requires: 
@@ -21,7 +20,6 @@ Running iSeqQC locally requires:
      biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
      <br/>
 After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
-<br/>
 setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")
