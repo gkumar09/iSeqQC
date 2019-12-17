@@ -1,4 +1,16 @@
 #!/usr/bin/env Rscript
+
+#########################################
+#####
+##### usage
+##### Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
+##### Example: Raw RNA-expression data with gene-symbols as gene identifiers from human
+##### Rscript --vanilla iSeqQC.R samplepheno.txt iseqqc_counts.txt R SYMBOL H
+##### Example: TPM normalized RNA-expression data with gene-ids as gene identifiers from mouse
+##### Rscript --vanilla iSeqQC.R samplepheno.txt iseqqc_counts.txt N ID M
+#####
+###########################################
+
 args=commandArgs(trailingOnly=TRUE)
 
 if (length(args)<5) {
@@ -98,10 +110,10 @@ colnames(filt_data_new) <- manifest_file$shortnames
 row.names(filt_data_new) <- make.names(gsub('\\..*','',ncts[,1]), unique=T)
 filt_data_new=setDT(filt_data_new, keep.rownames = T)[]
 names(filt_data_new)[1]<- "gene_id"
-          if(args[5]=="Human"){
+          if(args[5]=="H"){
             nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
           }
-          else if(args[5]=="Mouse"){
+          else if(args[5]=="M"){
             nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
           }
           else{
@@ -279,10 +291,10 @@ row.names(filt_data_new) <- make.names(gsub('\\..*','',ncts[,1]), unique=T)
     filt.log.filt_data_new =setDT(filt.log.filt_data_new, keep.rownames = T)[]
     names(filt.log.filt_data_new)[1]<- "gene_id"
       
-    if(args[5]=="Human"){
+    if(args[5]=="H"){
         nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
     }
-    else if(args[5]=="Mouse"){
+    else if(args[5]=="M"){
         nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
     }
       
@@ -342,10 +354,10 @@ distributionplot(filt_data_new)
           row.names(filt_data_new) <- make.names(ncts[,1], unique=T)
           filt_data_new=setDT(filt_data_new, keep.rownames = T)[]
           names(filt_data_new)[1]<- "gene_symbol"
-            if(args[5]=="Human"){
+            if(args[5]=="H"){
               nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
             }
-            else if(args[5]=="Mouse"){
+            else if(args[5]=="M"){
               nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
             }
           else{
@@ -524,10 +536,10 @@ filt_data_new <- final_data_new[match(as.character(manifest_file$samples), names
         filt.log.filt_data_new =setDT(filt.log.filt_data_new, keep.rownames = T)[]
         names(filt.log.filt_data_new)[1]<- "gene_symbol"
         
-        if(args[5]=="Human"){
+        if(args[5]=="H"){
           nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
         }
-        else if(args[5]=="Mouse"){
+        else if(args[5]=="M"){
           nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
         }
         else{
@@ -591,10 +603,10 @@ colnames(filt_data_new) <- manifest_file$shortnames
 row.names(filt_data_new) <- make.names(gsub('\\..*','',ncts[,1]), unique=T)
 filt_data_new=setDT(filt_data_new, keep.rownames = T)[]
 names(filt_data_new)[1]<- "gene_id"
-          if(args[5]=="Human"){
+          if(args[5]=="H"){
             nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
           }
-          else if(args[5]=="Mouse"){
+          else if(args[5]=="M"){
             nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
           }
           else{
@@ -771,10 +783,10 @@ row.names(filt_data_new) <- make.names(gsub('\\..*','',ncts[,1]), unique=T)
     filt.log.filt_data_new =setDT(filt.log.filt_data_new, keep.rownames = T)[]
     names(filt.log.filt_data_new)[1]<- "gene_id"
       
-    if(args[5]=="Human"){
+    if(args[5]=="H"){
         nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
     }
-    else if(args[5]=="Mouse"){
+    else if(args[5]=="M"){
         nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
     }
       
@@ -834,10 +846,10 @@ distributionplot(filt_data_new)
           row.names(filt_data_new) <- make.names(ncts[,1], unique=T)
           filt_data_new=setDT(filt_data_new, keep.rownames = T)[]
           names(filt_data_new)[1]<- "gene_symbol"
-            if(args[5]=="Human"){
+            if(args[5]=="H"){
               nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
             }
-            else if(args[5]=="Mouse"){
+            else if(args[5]=="M"){
               nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
             }
           else{
@@ -1016,10 +1028,10 @@ filt_data_new <- final_data_new[match(as.character(manifest_file$samples), names
         filt.log.filt_data_new =setDT(filt.log.filt_data_new, keep.rownames = T)[]
         names(filt.log.filt_data_new)[1]<- "gene_symbol"
         
-        if(args[5]=="Human"){
+        if(args[5]=="H"){
           nhg <- read.table('datafiles/annotation_hg38withGC.txt', sep = '\t', header = T, check.names = F)
         }
-        else if(args[5]=="Mouse"){
+        else if(args[5]=="M"){
           nhg <- read.table('datafiles/annotation_m38withGC.txt', sep = '\t', header = T, check.names = F)
         }
         else{

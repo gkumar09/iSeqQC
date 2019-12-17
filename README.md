@@ -1,14 +1,17 @@
 ## iSeqQC: An Expression based Quality Control tool
 
-### Webpage
+It is an expression-based quality control tool to detect outliers either produced by batch effects or merely due to dissimilarity within a phenotypic group.
+It can be utilized by three ways:
+
+### Webpage (No Installation required)
 iSeqQC is readily available at:<br/>
 <br/>
 &nbsp;&nbsp;&nbsp;<span></span>http://cancerwebpa.jefferson.edu/iSeqQC/
 
-### Command line
-You can download iSeqQC from github using following (if git is already installed in your computer):<br/>
+### Command line (Local R and Bioconductor libraries installation required)
+You can run iSeqQC cli script inside 'iSeqQC_cli' directory after local download:<br/>
 <br/>
-&nbsp;&nbsp;&nbsp;git clone https://<span></span>github.com/gkumar09/iSeqQC.git
+&nbsp;&nbsp;&nbsp; Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
 <br/>
 
 ### Local shiny installation
