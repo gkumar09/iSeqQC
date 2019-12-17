@@ -17,9 +17,11 @@ Running iSeqQC locally requires:
      <br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
 <br/>
-&nbsp;&nbsp;&nbsp; Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
+Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
+<br/>
 <br/>
 where,<br/>
+<br/>
 type_of_reads: R for raw reads and N for normalized reads<br/>
 type_of_gene_identifier: SYMBOL if count matrix has gene_symbols in first column and ID if it has gene_ids<br/>
 Organism: H for Human, M for Mouse and O for others<br/>
