@@ -9,12 +9,23 @@ iSeqQC is readily available at:<br/>
 &nbsp;&nbsp;&nbsp;<span></span>http://cancerwebpa.jefferson.edu/iSeqQC/
 
 ### Command line (Local R and Bioconductor libraries installation required)
-You can run iSeqQC cli script inside 'iSeqQC_cli' directory after local download:<br/>
+Running iSeqQC locally requires: 
+- Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
+- Installation of bioconductor packages using following commands: <br/>
+     source("https://<span></span>bioconductor.org/biocLite.R") <br/>
+     biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
+     <br/>
+- After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
 <br/>
 &nbsp;&nbsp;&nbsp; Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
+where,
+type_of_reads: R for raw reads and N for normalized reads
+type_of_gene_identifier: SYMBOL if count matrix has gene_symbols in first column and ID if it has gene_ids
+Organism: H for Human, M for Mouse and O for others
+
 <br/>
 
-### Local shiny installation
+### Local shiny installation (Local R and Bioconductor libraries installation required)
 #### Prerequisities
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
@@ -27,7 +38,6 @@ setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")
 
-  
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
 - File 1- Sample phenotype data: **First 4 columns should strictly match the names and order as mentioned below (names case-sensitive)** </br>
@@ -37,6 +47,7 @@ column 1: samples<br/>
 column 2: shortnames<br/>
 column 3: groups<br/>
 column 4: include<br/>
+column 5-11: any factors such as library method, protocol etc.<br/>
 
 Example:<br/>
 
@@ -45,43 +56,50 @@ Example:<br/>
     <th>samples</th>
     <th>shortnames</th>
     <th>groups</th>  
-    <th>include</th>  
+    <th>include</th> 
+    <th>libraryprep</th>  
   </tr>
   <tr>
     <td>Control_1</td>
     <td>C_1</td>  
     <td>control</td>  
     <td>TRUE</td>
+    <td>truseq</td>
   </tr>
   <tr>
     <td>Control_2</td>
     <td>C_2</td>  
     <td>control</td>  
     <td>TRUE</td>
+    <td>truseq</td>
   </tr>
   <tr>
     <td>Control_3</td>
     <td>C_3</td>  
     <td>control</td>  
     <td>TRUE</td>
+    <td>takara</td>
   </tr>
   <tr>
     <td>Treated_1</td>
     <td>T_1</td>  
     <td>treated</td>  
     <td>TRUE</td>
+    <td>truseq</td>
   </tr>
   <tr>
     <td>Treated_2</td>
     <td>T_2</td>  
     <td>treated</td>  
     <td>TRUE</td>
+    <td>truseq</td>
   </tr>
   <tr>
     <td>Treated_3</td>
     <td>T_3</td>  
     <td>treated</td>  
     <td>TRUE</td>
+    <td>takara</td>
   </tr>
 </table>
 
@@ -91,7 +109,7 @@ Example:<br/>
 
 <table >
   <tr>
-    <th>gene</th>
+    <th>gene_symbol</th>
     <th>Control_1</th>
     <th>Control_2</th>  
     <th>Control_3</th>
@@ -119,6 +137,37 @@ Example:<br/>
   </tr>
 </table>
 
+or
+
+<table >
+  <tr>
+    <th>gene_id</th>
+    <th>Control_1</th>
+    <th>Control_2</th>  
+    <th>Control_3</th>
+    <th>Treated_1</th>
+    <th>Treated_2</th>
+    <th>Treated_3</th>
+  </tr>
+ <tr>
+    <td>ENSG00000000003</td>
+    <td>642</td>
+    <td>329</td>  
+    <td>704</td>
+    <td>507</td>
+    <td>524</td>
+    <td>629</td>
+  </tr>
+   <tr>
+    <td>ENSG00000000005</td>
+    <td>1443</td>
+    <td>734</td>  
+    <td>1502</td>
+    <td>1175</td>
+    <td>1543</td>
+    <td>1111</td>
+  </tr>
+</table>
 
 ### Results Output
 iSeqQC displays the results in a form of a summary table and several plots: Summary statistics, counts distribution, Mapped read density, Housekeeping gene expression, Principal Component variances (zscored normalized), Principal Component variances (un-normalized), Hierarchical relationship between samples, Pearson correlation, Spearman correlation, GC bias)
