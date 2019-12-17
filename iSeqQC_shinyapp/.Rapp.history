@@ -1,0 +1,12 @@
+sessionInfo()
+source("https://bioconductor.org/biocLite.R")
+biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
+library("DEseq2")
+library("DESeq2")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("DESeq2")
+library("DESeq2")
+?DESeq2
+?DESeq
+library('shiny')
+runApp('~/Documents/tools/qc_tool/tool_publishing/bioconductor/iSeqQC')

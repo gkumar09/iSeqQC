@@ -1,0 +1,22 @@
+Package: iSeqQC
+Title: Quality Control analysis on expression count matrix data
+Version: 1.0
+Authors@R: c(person("Gaurav", "Kumar", email = "gaurav.neuro@gmail.com", role = c("aut", "cre")),
+	person("Adam", "Ertel", email = "Adam.Ertel@jefferson.edu", role = "ctb"),
+	person("Paolo", "Fortina", email = "Paolo.Fortina@jefferson.edu", role = "ctb"))
+Description: iSeqQC is aimed to provide quality control metrics on any Next Generation Sequencing (NGS) technology resulting in a count based coverage count matrix. This tools presents the metrics graphically to reveal the batch effects by implementing various statistical approaches. 
+Depends: R (>= 3.5.1)
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+Imports:
+	shiny,
+	FactoMineR,
+	factoextra,
+	som,
+	psych,
+	data.table,
+	ape,
+	corrplot,
+	limma
+RoxygenNote: 6.1.0
