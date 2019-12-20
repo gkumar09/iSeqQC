@@ -1,4 +1,4 @@
-gene_symbol	Feldman_22_5-2-19	Feldman_23_5-2-19	Feldman_25_5-2-19	Feldman_26_5-2-19	Feldman_05_5-2-19	Feldman_12_5-2-19	Feldman_13_5-2-19	Feldman_16-LW_5-2-19
+gene_symbol	Control1	Control2	Control3	Control4	Diseased1	Diseased2	Diseased3	Diseased4
 TSPAN6	36	32	51	10	221	223	119	280
 TNMD	40	10	20	1	1389	190	666	474
 DPM1	16	11	23	0	136	86	69	168
