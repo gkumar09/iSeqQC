@@ -18,6 +18,7 @@ Running iSeqQC locally requires:
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
 <br/>
 Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism
+Example command: Rscript --vanilla iSeqQC.R samplephenotype.txt iseqqc_rawcounts.txt R SYMBOL H
 <br/>
 <br/>
 where,<br/>
@@ -60,49 +61,49 @@ Example:<br/>
     <th>shortnames</th>
     <th>groups</th>  
     <th>include</th> 
-    <th>libraryprep</th>  
+    <th>Age</th>  
   </tr>
   <tr>
     <td>Control_1</td>
     <td>C_1</td>  
     <td>control</td>  
     <td>TRUE</td>
-    <td>truseq</td>
+    <td>21</td>
   </tr>
   <tr>
     <td>Control_2</td>
     <td>C_2</td>  
     <td>control</td>  
     <td>TRUE</td>
-    <td>truseq</td>
+    <td>32</td>
   </tr>
   <tr>
     <td>Control_3</td>
     <td>C_3</td>  
     <td>control</td>  
     <td>TRUE</td>
-    <td>takara</td>
+    <td>25</td>
   </tr>
   <tr>
     <td>Treated_1</td>
     <td>T_1</td>  
     <td>treated</td>  
     <td>TRUE</td>
-    <td>truseq</td>
+    <td>34</td>
   </tr>
   <tr>
     <td>Treated_2</td>
     <td>T_2</td>  
     <td>treated</td>  
     <td>TRUE</td>
-    <td>truseq</td>
+    <td>28</td>
   </tr>
   <tr>
     <td>Treated_3</td>
     <td>T_3</td>  
     <td>treated</td>  
     <td>TRUE</td>
-    <td>takara</td>
+    <td>23</td>
   </tr>
 </table>
 
