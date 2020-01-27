@@ -12,13 +12,19 @@ iSeqQC is readily available at:<br/>
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
 - Installation of bioconductor packages using following commands: <br/>
-     source("https://<span></span>bioconductor.org/biocLite.R") <br/>
-     biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
+	'''
+     if (!requireNamespace("BiocManager", quietly = TRUE)) <br/>
+     install.packages("BiocManager") <br/>
+	 BiocManager::install() <br/>
+     BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2")) <br/>
+    '''
      <br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
 <br/>
+'''
 Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism <br/>
-Example command: Rscript --vanilla iSeqQC.R samplephenotype.txt iseqqc_rawcounts.txt R SYMBOL H
+Example command: Rscript --vanilla iSeqQC_cli/iSeqQC.R exampleData/samplemanifestfile.txt exampleData/genesymbol_rawcounts.txt R SYMBOL H
+'''
 <br/>
 <br/>
 where,<br/>
@@ -34,13 +40,19 @@ Organism: H for Human, M for Mouse and O for others<br/>
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
 - Installation of bioconductor packages using following commands: <br/>
-     source("https://<span></span>bioconductor.org/biocLite.R") <br/>
-     biocLite(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma"))
+	'''
+     if (!requireNamespace("BiocManager", quietly = TRUE)) <br/>
+     install.packages("BiocManager") <br/>
+	 BiocManager::install() <br/>
+     BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2")) <br/>
+    '''
      <br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
 setwd("path_to_local_iSeqQC_installation_directory") <br/>
+'''
 library("shiny")<br/>
 runApp("iSeqQC")
+'''
 
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
