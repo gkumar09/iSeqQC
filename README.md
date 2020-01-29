@@ -12,12 +12,12 @@ iSeqQC is readily available at:<br/>
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
 - Installation of bioconductor packages using following commands: <br/>
-	```
-     if (!requireNamespace("BiocManager", quietly = TRUE))
-     install.packages("BiocManager")
-	 BiocManager::install()
-     BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2"))
-    ```
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("BiocManager")
+BiocManager::install()
+BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2"))
+```
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
 
 ```
@@ -34,12 +34,12 @@ Organism: H for Human, M for Mouse and O for others<br/>
 Running iSeqQC locally requires: 
 - Local installation of R or RStudio (version 3.5 or later)- if not available use https://cran.r-project.org/ to download.
 - Installation of bioconductor packages using following commands: <br/>
-	```
-     if (!requireNamespace("BiocManager", quietly = TRUE))
-     install.packages("BiocManager")
-	 BiocManager::install()
-     BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2"))
-    ```
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+install.packages("BiocManager")
+BiocManager::install()
+BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2"))
+```
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:
 ```
 setwd("path_to_local_iSeqQC_installation_directory")
