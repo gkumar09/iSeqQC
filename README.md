@@ -41,8 +41,8 @@ Running iSeqQC locally requires:
      BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2")) <br/>
     '''<br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
-setwd("path_to_local_iSeqQC_installation_directory") <br/>
 '''<br/>
+setwd("path_to_local_iSeqQC_installation_directory") <br/>
 library("shiny")<br/>
 runApp("iSeqQC")<br/>
 '''<br/>
