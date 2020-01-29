@@ -18,22 +18,16 @@ Running iSeqQC locally requires:
 	 BiocManager::install() <br/>
      BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2")) <br/>
     '''<br/>
-     <br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run from 'iSeqQC_cli' directory using following command:<br/>
-<br/>
+
 '''<br/>
 Rscript --vanilla iSeqQC.R sample_phenotype_file count_matrix type_of_reads type_of_gene_identifier Organism <br/>
 Example command: Rscript --vanilla iSeqQC_cli/iSeqQC.R exampleData/samplemanifestfile.txt exampleData/genesymbol_rawcounts.txt R SYMBOL H<br/>
 '''<br/>
-<br/>
-<br/>
 where,<br/>
-<br/>
 type_of_reads: R for raw reads and N for normalized reads<br/>
 type_of_gene_identifier: SYMBOL if count matrix has gene_symbols in first column and ID if it has gene_ids<br/>
 Organism: H for Human, M for Mouse and O for others<br/>
-
-<br/>
 
 ### Local shiny installation (Local R and Bioconductor libraries installation required)
 #### Prerequisities
@@ -46,7 +40,6 @@ Running iSeqQC locally requires:
 	 BiocManager::install() <br/>
      BiocManager::install(c("shiny", "FactoMineR", "factoextra", "som", "psych", "data.table", "ape", "corrplot", "limma", "DESeq2")) <br/>
     '''<br/>
-     <br/>
 - After successfully installing R/RStudio and related packages, iSeqQC can simply be run using following commands in R console:<br/>
 setwd("path_to_local_iSeqQC_installation_directory") <br/>
 '''<br/>
