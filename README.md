@@ -47,6 +47,9 @@ library("shiny")<br/>
 runApp("iSeqQC")<br/>
 '''<br/>
 
+Please note: iSeqQC shiny installations are successful tested on safari v-12.1, chrome  v-79.0, and firefox v-72.2. However, we recommend google chrome for optimum usage. 
+
+
 ### Input files requirement
 iSeqQC requires two files for the analysis. Both files should be ASCII formatted **tab-delimited** file only
 - File 1- Sample phenotype data: **First 4 columns should strictly match the names and order as mentioned below (names case-sensitive)** </br>
