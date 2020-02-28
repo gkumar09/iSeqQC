@@ -25,8 +25,8 @@ shinyUI(fluidPage
                                             h4("Please note: To remove any sample from analysis, simply replace 'TRUE' with 'FALSE' in 'include' column in sample manifest file.", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.4"), br(),
                                             h4("Additional information can be obtained at https://github.com/gkumar09/iSeqQC", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.8"),br(),
                                             
-                                            h4("Citation: Preprint", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.4"),
-                                            h4("Kumar G, Ertel A, Feldman G, Kupper J, Fortina P (2019). iSeqQC: A Tool for Expression-Based Quality Control in RNA Sequencing. BioRxiv. https://doi.org/10.1101/768101", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.2"),br(),
+                                            h4("Citation:", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.4"),
+                                            h4("Kumar G, Ertel A, Feldman G, Kupper J, Fortina P (2020). iSeqQC: A Tool for Expression-Based Quality Control in RNA Sequencing. BMC Bioinformatics. Feb 13;21(1):56. doi: 10.1186/s12859-020-3399-8. PMID: 32054449; PMCID: PMC7020508", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.2"),br(),
                                             h4("Contact:", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.4"),
                                             h4("Gaurav Kumar, PhD", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.2"),
                                             h4("Email address: gaurav.kumar@jefferson.edu", align="left",style = "font-family: 'times'; font-si14pt; line-height:1.2"),

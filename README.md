@@ -180,4 +180,5 @@ iSeqQC displays the results in a form of a summary table and several plots: Summ
 ### Workflow
 <img src= "https://user-images.githubusercontent.com/10853956/44124859-5ad6b14a-9ffd-11e8-9118-73f80c3b3514.png" width="500" height="250">
 
-
+### Citation
+Kumar G, Ertel A, Feldman G, Kupper J, Fortina P (2020). iSeqQC: A Tool for Expression-Based Quality Control in RNA Sequencing. BMC Bioinformatics. Feb 13;21(1):56. doi: 10.1186/s12859-020-3399-8. PMID: 32054449; PMCID: PMC7020508
