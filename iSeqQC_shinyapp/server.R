@@ -330,13 +330,10 @@ pca4_input <- reactive({
     manifest_file <- read.delim(input$manifest$datapath, sep="\t", header=TRUE, check.names = F)
     manifest_file <- manifest_file[manifest_file$include,]
     counts_file <- read.delim(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-      filt_data_new <- filtering_data(manifest_file, counts_file)
-      data.norm <- normalize_data(filt_data_new)
-      data.final <- as.matrix(data.norm)
-      #data.final <- as.matrix(filt_data_new)
-      colnames(data.final) <- manifest_file$shortnames
-      tran_data.final <- t(data.final)
-      librarysize <- colSums(filt_data_new)
+    filt_data_new <- filtering_data(manifest_file, counts_file) 
+	data.norm <- normalize_data(filt_data_new)
+	data.final <- as.matrix(data.norm)
+	librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 
@@ -858,12 +855,10 @@ select_plot6 <- function(){
      manifest_file <- read.delim(input$manifest$datapath, sep="\t", header=TRUE, check.names = F)
     manifest_file <- manifest_file[manifest_file$include,]
     counts_file <- read.delim(input$countsmatrix$datapath, sep="\t", header=TRUE, check.names = F)
-      filt_data_new <- filtering_data(manifest_file, counts_file)
-      filt_data_new <- normalize_data(filt_data_new)
-      data.final <- as.matrix(filt_data_new)
-      colnames(data.final) <- manifest_file$shortnames
-      tran_data.final <- t(data.final)
-      librarysize <- colSums(filt_data_new)
+    filt_data_new <- filtering_data(manifest_file, counts_file) 
+	data.norm <- normalize_data(filt_data_new)
+	data.final <- as.matrix(data.norm)
+	librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 

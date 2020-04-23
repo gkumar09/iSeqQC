@@ -184,9 +184,7 @@ nfilt_data_new <- cbind(counts_file[,1], filt_data_new)
 filt_data_new <- filtering_data(manifest_file, counts_file) 
 data.norm <- normalize_data(filt_data_new)
 data.final <- as.matrix(data.norm)
-colnames(data.final) <- manifest_file$shortnames
-tran_data.final <- t(data.final)
-librarysize <- colSums(filt_data_new)
+librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 
@@ -426,12 +424,10 @@ nfilt_data_new <- cbind(counts_file[,1], filt_data_new)
     dev.off()
 
 # Multi-factor PCA
-filt_data_new <- filtering_data(manifest_file, counts_file)
+filt_data_new <- filtering_data(manifest_file, counts_file) 
 data.norm <- normalize_data(filt_data_new)
-data.final <- as.matrix(data.norm) 
-colnames(data.final) <- manifest_file$shortnames
-tran_data.final <- t(data.final)
-librarysize <- colSums(filt_data_new)
+data.final <- as.matrix(data.norm)
+librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 
@@ -676,9 +672,7 @@ nfilt_data_new <- cbind(counts_file[,1], filt_data_new)
 # Multi-factor PCA
 filt_data_new <- filtering_data(manifest_file, counts_file) 
 data.final <- as.matrix(filt_data_new)
-colnames(data.final) <- manifest_file$shortnames
-tran_data.final <- t(data.final)
-librarysize <- colSums(filt_data_new)
+librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 
@@ -917,12 +911,9 @@ nfilt_data_new <- cbind(counts_file[,1], filt_data_new)
     dev.off()
 
 # Multi-factor PCA
-filt_data_new <- filtering_data(manifest_file, counts_file)
-data.norm <- normalize_data(filt_data_new)
-data.final <- as.matrix(data.norm) 
-colnames(data.final) <- manifest_file$shortnames
-tran_data.final <- t(data.final)
-librarysize <- colSums(filt_data_new)
+filt_data_new <- filtering_data(manifest_file, counts_file) 
+data.final <- as.matrix(filt_data_new)
+librarysize <- colSums(data.final)
       if(dim(manifest_file)[2]==5){
         final.tran_data.final <- as.data.frame(cbind(as.numeric(manifest_file[,5]),librarysize))
         MFA_respca <- MFA(final.tran_data.final, group = c(1,1), type = c('s','s'), name.group = c(names(manifest_file[5]),"Lib.Size"), graph = F) 
